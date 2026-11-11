@@ -1,0 +1,82 @@
+/* ---------- description builder ---------- */
+
+.block-row {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 4px 4px 4px 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.block-row.on {
+  border-color: var(--line-2);
+  background: var(--sunken);
+}
+
+.desc-fold {
+  padding: 10px 12px;
+  border-left: 3px solid var(--g, var(--focus));
+  border-radius: 0 8px 8px 0;
+  background: var(--sunken);
+  font-size: 14px;
+}
+
+.desc-out {
+  max-height: 46vh;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow-y: auto;
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+
+/* ---------- chapter generator ---------- */
+
+.chapter-row {
+  display: grid;
+  grid-template-columns: 84px minmax(0, 1fr) auto;
+  gap: 8px;
+  align-items: center;
+}
+
+.chapter-row .input:first-child {
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- pre-publish checklist ---------- */
+
+.check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 7px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.check-item:hover {
+  background: var(--sunken);
+}
+
+.check-item .check {
+  flex: none;
+  margin-top: 2px;
+}
+
+.check-item.done span {
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+/* ---------- promo planner ---------- */
+
+.promo-kind {
+  width: 170px;
+}
+
+.promo-date {
+  width: 150px;
+}
